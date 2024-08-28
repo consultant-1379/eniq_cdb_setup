@@ -1,0 +1,11 @@
+<suite name="OnlyInitialInstallCDB">
+	<test name="OnlyInitialInstallCDB">
+		<classes>
+			<class
+				name="com.ericsson.ci.cloud.eniq_cdb_setup.test.cases.EnvironmentSetUp" />
+			<methods>
+				<include name="verifyEnvironmentInstallation" />
+			</methods>
+		</classes>
+	</test>
+</suite>

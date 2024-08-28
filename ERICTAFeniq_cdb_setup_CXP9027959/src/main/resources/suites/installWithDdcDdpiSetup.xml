@@ -1,0 +1,11 @@
+<suite name="DdcDdpiSetup">
+	<test name="DdcDdpiSetup">
+		<classes>
+			<class
+				name="com.ericsson.ci.cloud.ossrc_cdb_setup.test.cases.EnvironmentSetUpScenarios" />
+			<methods>
+				<include name="verifyInstallationWithDdcDdpiSetup" />
+			</methods>
+		</classes>
+	</test>
+</suite>

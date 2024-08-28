@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ericsson.oss</groupId>
+        <artifactId>integration</artifactId>
+        <version>1.0.105</version>
+    </parent>
+    <groupId>com.ericsson.ci.cloud</groupId>
+    <artifactId>eniq_cdb_setup</artifactId>
+    <version>1.0.26-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>ERICTAFeniq_cdb_setup_CXP9027959</module>
+        <module>test-pom</module>
+    </modules>
+
+    <properties>
+        <taf_version>2.5.1</taf_version>
+		<allure.version>1.4.4</allure.version>
+		<aspectj.version>1.8.3</aspectj.version>
+	<!--	<scm.url>scm:git:ssh://gerrit.ericsson.se:29418/OSS/com.ericsson.ci.cloud/eniq_cdb_setup</scm.url> -->
+    </properties>
+    <build>
+        <pluginManagement>
+            <plugins>
+				<plugin>
+					<groupId>com.ericsson.cifwk.taf</groupId>
+					<artifactId>taf-allure-maven-plugin</artifactId>
+					<version>${taf_version}</version>
+				</plugin>
+                <plugin>
+                    <groupId>com.ericsson.cifwk.taf</groupId>
+                    <artifactId>taf-allure-old-maven-plugin</artifactId>
+                    <version>${taf_version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.ericsson.cifwk.taf</groupId>
+                    <artifactId>taf-maven-plugin</artifactId>
+                    <version>${taf_version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>clean</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>com.ericsson.cifwk.taf</groupId>
+                <artifactId>taf-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+<!--	<distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Release repo</name>
+	    <url>http://eselivm2v214l.lmera.ericsson.se:8081/nexus/content/repositories/releases</url>
+        </repository>
+    </distributionManagement>
+
+    <scm>
+        <connection>${scm.url}</connection>
+        <developerConnection>${scm.url}</developerConnection>
+        <tag>eniq-cdb-1.0.1</tag>
+    </scm> -->
+</project>
